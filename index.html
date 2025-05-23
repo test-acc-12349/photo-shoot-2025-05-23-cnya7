@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo-Shoot - Ultimate Product Photography Lightbox</title>
     <meta name="description" content="Get the ultimate product photography lightbox - USB Powered, Dimmable, and Portable">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .feature-card {
+            transition: all 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body class="font-sans antialiased">
     <!-- Announcement Bar -->
@@ -18,22 +44,35 @@
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center">
-                <a href="/" class="text-2xl font-bold text-gray-800">Photo-Shoot</a>
+                <a href="https://test-acc-12349.github.io/photo-shoot-2025-05-23-cnya7" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">Photo-Shoot</a>
             </div>
             
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#features" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Features</a>
-                <a href="#benefits" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Benefits</a>
-                <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">FAQ</a>
-                <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Features</a>
+                <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Benefits</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Testimonials</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+                <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
+                   class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                     Buy Now
                 </a>
             </div>
             
-            <button class="md:hidden text-gray-600">
+            <button class="mobile-menu-button md:hidden text-gray-600" aria-label="Toggle menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white w-full border-t border-gray-200">
+            <a href="#features" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Features</a>
+            <a href="#benefits" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Benefits</a>
+            <a href="#testimonials" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">Testimonials</a>
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">About</a>
+            <a href="#faq" class="block px-4 py-2 text-gray-600 hover:bg-gray-50">FAQ</a>
+            <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" class="block px-4 py-2 text-white bg-blue-600 hover:bg-blue-700">Buy Now</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -47,10 +86,10 @@
         
         <div class="relative container mx-auto px-4 text-center text-white">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Photo-Shoot</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Get the ultimate product photography lightbox</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">The professional's choice for stunning product photography. Create magazine-quality images with our advanced lightbox system.</p>
             <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
-               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
-                Shop Now
+               class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Shop Now - Limited Time Offer
             </a>
         </div>
     </section>
@@ -62,30 +101,30 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- USB Powered -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300">
+                <div class="feature-card bg-white rounded-xl shadow-lg p-8">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-plug text-4xl"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-4">USB Powered</h3>
-                    <p class="text-gray-600">Connect to any USB port for consistent, reliable power supply</p>
+                    <p class="text-gray-600">Connect to any USB port for consistent, reliable power supply. Compatible with laptops, power banks, and wall adapters for maximum flexibility.</p>
                 </div>
 
                 <!-- Dimmable -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300">
+                <div class="feature-card bg-white rounded-xl shadow-lg p-8">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-lightbulb text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Dimmable</h3>
-                    <p class="text-gray-600">Adjust lighting intensity for perfect product shots</p>
+                    <h3 class="text-xl font-semibold mb-4">Dimmable Lighting</h3>
+                    <p class="text-gray-600">Precise control over lighting intensity with 10 adjustable levels. Perfect for capturing products with different reflective properties.</p>
                 </div>
 
                 <!-- Portable -->
-                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition-all duration-300">
+                <div class="feature-card bg-white rounded-xl shadow-lg p-8">
                     <div class="text-blue-600 mb-4">
                         <i class="fas fa-suitcase text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4">Portable</h3>
-                    <p class="text-gray-600">Lightweight and collapsible for easy transport and storage</p>
+                    <h3 class="text-xl font-semibold mb-4">Ultra Portable</h3>
+                    <p class="text-gray-600">Innovative folding design collapses to just 2 inches thin. Includes carrying case for easy transport and protection during storage.</p>
                 </div>
             </div>
         </div>
@@ -98,16 +137,17 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="order-2 md:order-1">
-                        <h2 class="text-3xl font-bold mb-6">Enhanced Images</h2>
-                        <p class="text-gray-600 mb-8">Create stunning, professional-quality product photos that make your items stand out in the marketplace.</p>
-                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300">
-                            Get Started
+                        <h2 class="text-3xl font-bold mb-6">Professional-Grade Images</h2>
+                        <p class="text-gray-600 mb-8">Transform your product photography with studio-quality results. Our advanced LED technology and specially designed diffusion material eliminate harsh shadows and provide perfect color accuracy. Ideal for e-commerce, social media, and professional product catalogs.</p>
+                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
+                           class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            Get Started Today
                         </a>
                     </div>
                     <div class="order-1 md:order-2">
                         <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
                              alt="Enhanced Product Photography" 
-                             class="rounded-xl shadow-lg">
+                             class="rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                     </div>
                 </div>
             </div>
@@ -120,12 +160,13 @@
                     <div>
                         <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
                              alt="Time Saving Photography" 
-                             class="rounded-xl shadow-lg">
+                             class="rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                     </div>
                     <div>
-                        <h2 class="text-3xl font-bold mb-6">Save Time</h2>
-                        <p class="text-gray-600 mb-8">Quick setup and intuitive controls let you capture perfect shots in minutes, not hours.</p>
-                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300">
+                        <h2 class="text-3xl font-bold mb-6">Maximize Efficiency</h2>
+                        <p class="text-gray-600 mb-8">Cut your product photography time by up to 75%. Our quick-assembly design and intuitive controls mean you can set up and start shooting in under 60 seconds. Perfect for businesses needing to photograph multiple products quickly without sacrificing quality.</p>
+                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
+                           class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                             Learn More
                         </a>
                     </div>
@@ -138,18 +179,101 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div class="order-2 md:order-1">
-                        <h2 class="text-3xl font-bold mb-6">Boost Sales</h2>
-                        <p class="text-gray-600 mb-8">Professional product photos increase conversion rates and customer trust.</p>
-                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300">
-                            Start Now
+                        <h2 class="text-3xl font-bold mb-6">Drive More Sales</h2>
+                        <p class="text-gray-600 mb-8">High-quality product photos can increase conversion rates by up to 40%. Our lightbox helps you create professional, consistent images that build trust with customers and showcase your products in the best possible light. Perfect for e-commerce platforms, social media, and marketing materials.</p>
+                        <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
+                           class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            Start Selling More
                         </a>
                     </div>
                     <div class="order-1 md:order-2">
                         <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
                              alt="Sales Boost Photography" 
-                             class="rounded-xl shadow-lg">
+                             class="rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">What Our Customers Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The Photo-Shoot lightbox transformed our Etsy store. Product photos look professional, and our sales increased by 45% in the first month!"</p>
+                    <p class="font-semibold">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Etsy Store Owner</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Setup takes seconds, and the dimmable lighting is perfect for my jewelry photography. Best investment for my business this year."</p>
+                    <p class="font-semibold">Michael Chen</p>
+                    <p class="text-sm text-gray-500">Jewelry Designer</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The portability is amazing. I can shoot products anywhere, and the results are consistently professional. Customer service is top-notch too!"</p>
+                    <p class="font-semibold">Emma Rodriguez</p>
+                    <p class="text-sm text-gray-500">Social Media Manager</p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">"We photograph hundreds of products weekly, and this lightbox has cut our photography time in half while improving quality."</p>
+                    <p class="font-semibold">David Thompson</p>
+                    <p class="text-sm text-gray-500">E-commerce Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Photo-Shoot</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-600 mb-8">
+                    Founded in 2020 by a team of professional photographers and e-commerce experts, Photo-Shoot emerged from the need for accessible, professional-quality product photography solutions. Our journey began in a small studio in San Francisco, where we spent countless hours perfecting our lightbox design to meet the exact needs of online sellers and content creators.
+                </p>
+                
+                <p class="text-gray-600">
+                    Our mission is to democratize professional product photography, making it accessible to businesses of all sizes. We believe in combining cutting-edge technology with user-friendly design, all while maintaining our core values of innovation, quality, and customer success. Every Photo-Shoot product is tested extensively to ensure it meets our high standards for performance and durability.
+                </p>
             </div>
         </div>
     </section>
@@ -160,7 +284,8 @@
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
             
             <div class="max-w-3xl mx-auto space-y-6">
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <button class="w-full text-left px-6 py-4 focus:outline-none">
                         <div class="flex justify-between items-center">
                             <h3 class="text-lg font-semibold">What power source does it use?</h3>
@@ -168,19 +293,46 @@
                         </div>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">The lightbox is USB powered, making it compatible with most power sources including laptops, power banks, and wall adapters.</p>
+                        <p class="text-gray-600">The lightbox is powered via USB, compatible with any standard 5V USB port including laptops, power banks, and wall adapters. A 2-meter USB cable is included in the package.</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-md">
+                <!-- Question 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                     <button class="w-full text-left px-6 py-4 focus:outline-none">
                         <div class="flex justify-between items-center">
-                            <h3 class="text-lg font-semibold">What are the dimensions?</h3>
+                            <h3 class="text-lg font-semibold">What are the dimensions and weight?</h3>
                             <i class="fas fa-plus text-blue-600"></i>
                         </div>
                     </button>
                     <div class="px-6 pb-4">
-                        <p class="text-gray-600">The lightbox measures 16" x 16" x 16" when assembled and folds flat for storage.</p>
+                        <p class="text-gray-600">The lightbox measures 16" x 16" x 16" when assembled and folds flat to just 2" thick. It weighs only 2.2 lbs, making it perfectly portable for on-the-go photography.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What's included in the package?</h3>
+                            <i class="fas fa-plus text-blue-600"></i>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">Each kit includes the foldable lightbox, USB power cable, 4 background colors (white, black, gray, blue), carrying case, and detailed setup guide with photography tips.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <button class="w-full text-left px-6 py-4 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What's your warranty policy?</h3>
+                            <i class="fas fa-plus text-blue-600"></i>
+                        </div>
+                    </button>
+                    <div class="px-6 pb-4">
+                        <p class="text-gray-600">We offer a 2-year warranty covering manufacturing defects and LED performance. Additionally, there's a 30-day money-back guarantee if you're not completely satisfied.</p>
                     </div>
                 </div>
             </div>
@@ -189,12 +341,18 @@
 
     <!-- CTA Section -->
     <section class="relative py-24">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1600&h=900&fit=crop&q=80" 
+                 alt="Photography Setup" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90"></div>
+        </div>
         <div class="relative container mx-auto px-4 text-center text-white">
             <h2 class="text-3xl md:text-4xl font-bold mb-8">Ready to Transform Your Product Photography?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of successful businesses using Photo-Shoot to create stunning product images.</p>
             <a href="https://buy.stripe.com/14k5mM58ObjBbRK000" 
-               class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Get Your Lightbox Now
+               class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Get Your Lightbox Now - Special Offer
             </a>
         </div>
     </section>
@@ -205,32 +363,38 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Photo-Shoot</h3>
-                    <p class="text-gray-400">The ultimate product photography solution</p>
+                    <p class="text-gray-400">Transforming product photography for businesses worldwide</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
-                    <p class="text-gray-400">admin@photoshoot.site</p>
+                    <p class="text-gray-400">Email: admin@photoshoot.site</p>
+                    <p class="text-gray-400">Support: support@photoshoot.site</p>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Policies</h4>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li>Shipping Policy</li>
-                        <li>Return Policy</li>
-                        <li>Privacy Policy</li>
-                        <li>Terms of Service</li>
+                        <li><a href="https://test-acc-12349.github.io/photo-shoot-2025-05-23-cnya7/privacy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://test-acc-12349.github.io/photo-shoot-2025-05-23-cnya7/terms.html" class="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://test-acc-12349.github.io/photo-shoot-2025-05-23-cnya7/blog.html" class="hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Shipping Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Return Policy</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-facebook text-2xl"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-instagram text-2xl"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
                         </a>
                     </div>
                 </div>
@@ -240,5 +404,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
